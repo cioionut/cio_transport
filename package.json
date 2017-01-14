@@ -1,5 +1,5 @@
 {
-  "name": "react-tutorials",
+  "name": "cio_transport",
   "version": "0.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -16,6 +16,7 @@
     "babel-preset-stage-0": "^6.16.0",
     "history": "^4.4.1",
     "react": "^0.14.8",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^0.14.8",
     "react-redux": "^4.4.6",
     "react-router": "^3.0.0",

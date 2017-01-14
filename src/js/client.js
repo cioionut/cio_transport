@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { Router, Route, IndexRoute, browserHistory } from "react-router";
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
-import Archives from "./pages/Archives";
+import Tours from "./pages/Tours";
 import Featured from "./pages/Featured";
 import Layout from "./pages/Layout";
 import Settings from "./pages/Settings";
@@ -21,7 +21,7 @@ ReactDOM.render(
     <Router history={history}>
       <Route path="/" component={Layout}>
         <IndexRoute component={Featured}></IndexRoute>
-        <Route path="archives(/:article)" name="archives" component={Archives}></Route>
+        <Route path="excursii(/:obiectiv)" name="excursii" component={Tours}></Route>
         <Route path="settings" name="settings" component={Settings}></Route>
       </Route>
     </Router>

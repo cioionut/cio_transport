@@ -1,10 +1,10 @@
 import React from "react";
 
-import Article from "../components/Article";
+import Tour from "../components/Tour";
 
 export default class Featured extends React.Component {
   render() {
-    const Articles = [
+    const Tours = [
       "Some Article",
       "Some Other Article",
       "Yet Another Article",
@@ -17,7 +17,7 @@ export default class Featured extends React.Component {
       "Some Other Article",
       "Yet Another Article",
       "Still More",
-    ].map((title, i) => <Article key={i} title={title}/> );
+    ].map((title, i) => <Tour key={i} title={title}/> );
 
     const adText = [
       "Ad spot #1",
@@ -38,7 +38,7 @@ export default class Featured extends React.Component {
             </div>
           </div>
         </div>
-        <div class="row">{Articles}</div>
+        <div class="row">{Tours}</div>
       </div>
     );
   }
