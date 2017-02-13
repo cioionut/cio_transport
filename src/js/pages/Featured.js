@@ -1,23 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import Tour from "../components/Tour";
+import { fetchTours } from "../actions/toursActions";
 
+
+@connect((store) => {
+  return {
+    tours: store.tours.tours
+  };
+})
 export default class Featured extends React.Component {
+  componentWillMount() {
+    this.props.dispatch(fetchTours());
+  }
   render() {
-    const Tours = [
-      "Some Article",
-      "Some Other Article",
-      "Yet Another Article",
-      "Still More",
-      "Some Article",
-      "Some Other Article",
-      "Yet Another Article",
-      "Still More",
-      "Some Article",
-      "Some Other Article",
-      "Yet Another Article",
-      "Still More",
-    ].map((title, i) => <Tour key={i} title={title}/> );
+    const Tours = this.props.tours.map(
+            (tour, i) => <Tour key={i} tour={tour} /> );
 
     const adText = [
       "Ad spot #1",
@@ -28,7 +27,6 @@ export default class Featured extends React.Component {
     ];
 
     const randomAd = adText[Math.round( Math.random() * (adText.length-1) )];
-    console.log("featured");
     return (
       <div>
         <div class="row">

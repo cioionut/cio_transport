@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
 import { routerReducer } from 'react-router-redux';
 
-import tweets from "./tweetsReducer";
+import tours from "./toursReducer";
 import user from "./userReducer";
 
 export default combineReducers({
   routing: routerReducer,
-  tweets,
+  tours,
   user,
 });

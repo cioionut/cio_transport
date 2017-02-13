@@ -21,7 +21,6 @@ export default class Layout extends React.Component {
 
   render() {
     const { location } = this.props;
-    console.log(location);
     let menuActiveKey = 1;
     if(location.pathname.includes('excursii')) {
       menuActiveKey = 2;
@@ -49,14 +48,14 @@ export default class Layout extends React.Component {
           </Navbar>
         </Row>
         <Row>
-          <Col xs={12} md={2}>
+          <Col xs={4} md={2}>
             <Nav bsStyle="pills" stacked activeKey={menuActiveKey}>
               <NavItem eventKey={1} title="Acasa" href="/">Acasa</NavItem>
               <NavItem eventKey={2} title="Excursii" href="/excursii">Excursii</NavItem>
               <NavItem eventKey={3} title="Transport">Transport</NavItem>
             </Nav>
           </Col>
-          <Col xs={6} md={10}>
+          <Col xs={8} md={10}>
             {this.props.children}
           </Col>
         </Row>
